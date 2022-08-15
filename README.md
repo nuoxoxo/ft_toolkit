@@ -1,12 +1,12 @@
 # Summary
 
-It is also called `ft_LGPT`
+:sunflower: It is also called `ft_LGPT`
 
 ie. the <kbd> Libft - Get_next_line - Printf Toolkit </kbd>
 
 # Usage
 
-add the following rules in the <kbd> Makefile </kbd> of the program
+:avocado: add the following rules in the <kbd> Makefile </kbd> of the program
 
 ```r
 # basic setup
