@@ -2,7 +2,7 @@
 
 :sunflower: It is also called `ft_LGPT`
 
-ie. the <kbd> Libft - Get_next_line - Printf Toolkit </kbd>
+ie. <kbd> Libft - Get_next_line - Printf Toolkit </kbd>
 
 # Usage
 
