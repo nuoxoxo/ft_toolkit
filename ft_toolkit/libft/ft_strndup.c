@@ -15,7 +15,7 @@
 
 int	len_dup(char *s);
 
-char	*ft_strdup(const char *src, int n)
+char	*ft_strndup(const char *src, int n)
 {
 	char	*ptr;
 	char	*des;
