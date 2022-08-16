@@ -24,12 +24,14 @@ char	*ft_strjoin(char const *prefix, char const *suffix)
 	int		size;
 	char	*res;
 
-	if (!prefix || !suffix)
-		return (NULL);
+	if (!prefix)
+		return (0);
+	if (!suffix)
+		return ((char *) prefix);
 	size = len_join((char *) prefix) + len_join((char *) suffix) + 1;
 	res = (char *) malloc(sizeof(char) * size);
 	if (!res)
-		return (NULL);
+		return (0);
 	cpy(res, (char *) prefix);
 	cat(res, (char *) suffix);
 	return (res);
