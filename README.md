@@ -8,22 +8,25 @@ ie. <kbd> Libft - Get_next_line - Printf Toolkit </kbd>
 
 :avocado: add the following rules in the <kbd> Makefile </kbd> of the program
 
-```r
-# basic setup
 
+###### basic setup
+
+```r
 lib_path := ../ft_toolkit/
 lib_incl := -I $(lib_path)
 lib_name := $(lib_path)ft_toolkit.a
+```
 
+###### under target recipe
 
-# under recipe  " $(name) := $(bud) "
-
+```r
 $(name) : $(bud)
         @ make -C $(lib_path)
+```
 
+###### under cleanup
 
-# also in cleanup
-
+```r
 clean :
         @ make -C $(lib_path) clean
 
