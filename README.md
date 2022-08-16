@@ -17,14 +17,14 @@ lib_incl := -I $(lib_path)
 lib_name := $(lib_path)ft_toolkit.a
 ```
 
-###### under target recipe
+###### target recipe
 
 ```r
 $(name) : $(bud)
         @ make -C $(lib_path)
 ```
 
-###### under cleanup
+###### cleanup
 
 ```r
 clean :
