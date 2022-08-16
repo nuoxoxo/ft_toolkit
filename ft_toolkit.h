@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ft_toolkit_H
-# define ft_toolkit_H
+#ifndef FT_TOOLKIT_H
+# define FT_TOOLKIT_H
 
 # include "stdlib.h"
 # include "unistd.h" // size_t dependency
@@ -25,11 +25,13 @@
  */
 
 char	*get_next_line(int f);
-int	print(const char *s, ...);
+int		print(const char *s, ...);
 
 char	*ft_itoa(int n);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s);
+
+char	*ft_strndup(const char *__, int _); // new
 
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
