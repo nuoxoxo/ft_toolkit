@@ -33,3 +33,7 @@ clean :
 fclean : clean
         @ make -C $(lib_path) fclean
 ```
+&nbsp;
+
+![made in c](http://ForTheBadge.com/images/badges/made-with-c.svg)
+![built with love](http://ForTheBadge.com/images/badges/built-with-love.svg)
