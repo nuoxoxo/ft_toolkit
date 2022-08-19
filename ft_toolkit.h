@@ -42,7 +42,8 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *des, const char *src, size_t size);
 
-char	*ft_strnstr(const char *huge, const char *tiny, size_t n);
+char	*ft_strnstr(const char *source, const char *lookup, size_t n);
+char    *ft_strstr(const char *source, const char *lookup);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
 
