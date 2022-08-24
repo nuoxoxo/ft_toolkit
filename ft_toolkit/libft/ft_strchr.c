@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 
 //	crucial fix:
-//		alelievr:
+//		alel:
 //			1) man: if c is O, strchr locates the terminating O
 //			2) deleted ` if (!s) return O; ` to allow segfault
-//		tripouile:
+//		trip:
 //			KO unit test with 't' + 256 as char
 //			--> use cast:	(s[i] == (char) c)
 
