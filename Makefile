@@ -67,15 +67,13 @@ SRC_LIBC	:=	ft_atoi.c \
 			#ft_tolower.c
 			#ft_toupper.c
 
-SRC_LGP		:=	$(addprefix ./get_next_line/, $(SRC_GNL)) \
-			$(addprefix ./libft/, $(SRC_LIBC)) \
-			$(addprefix ./print/, $(SRC_PRT)) \
+SRC_ALL		:=	$(addprefix get_next_line/, $(SRC_GNL)) \
+			$(addprefix libft/, $(SRC_LIBC)) \
+			$(addprefix print/, $(SRC_PRT))
 
-SRC		:=	$(addprefix ./ft_toolkit/, $(SRC_LGP))
+SRC		:=	$(addprefix ft_toolkit/, $(SRC_ALL))
 
 BUD		:=	$(SRC:%.c=%.o)
-#BUD		:=	$(notdir $(SRC))
-#BUD		:=	$(patsubst %, %, $(BUD:.c=.o))
 
 all		:	$(NAME)
 
