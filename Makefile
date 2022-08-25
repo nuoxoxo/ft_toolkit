@@ -64,9 +64,6 @@ SRC_LIBC	:=	ft_atoi.c \
 			ft_lstnew.c \
 			ft_lstsize.c
 
-			#ft_tolower.c
-			#ft_toupper.c
-
 SRC_ALL		:=	$(addprefix get_next_line/, $(SRC_GNL)) \
 			$(addprefix libft/, $(SRC_LIBC)) \
 			$(addprefix print/, $(SRC_PRT))
