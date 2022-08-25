@@ -15,8 +15,8 @@
 
 # include "stdlib.h"
 # include "unistd.h" // size_t dependency
-//# include "print/print.h"
-//# include "get_next_line/get_next_line.h"
+
+# define slen ft_strlen
 
 /*
  *
@@ -63,6 +63,10 @@ int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+
+//	new
+
+void	exit_error_alloc(void);
 
 /*
  *
