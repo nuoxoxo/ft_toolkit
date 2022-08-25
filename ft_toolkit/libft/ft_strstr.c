@@ -12,25 +12,25 @@
 
 #include "ft_toolkit.h"
 
-char    *ft_strstr(const char *str, const char *to_find)
+char	*ft_strstr(const char *str, const char *to_find)
 {
-	size_t  i;
-	size_t  j;
+	size_t		i;
+	size_t		j;
 
 	if (ft_strlen(to_find) == 0)
-            return ((char *)str);
-        i = -1;
+		return ((char *)str);
+	i = -1;
 	while (str[++i])
 	{
-            j = 0;
-	    while (str[i + j] == to_find[j])
-            {
-                j++;
-                if (j == ft_strlen(to_find))
-                    return ((char *) &str[i]);
-            }
-        }
-        return (0);
+		j = 0;
+		while (str[i + j] == to_find[j])
+		{
+			j++;
+			if (j == ft_strlen(to_find))
+				return ((char *) & str[i]);
+		}
+	}
+	return (0);
 }
 
 /*

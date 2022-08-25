@@ -15,3 +15,5 @@ void	exit_error_alloc(void)
 	ft_putendl_fd("cannot allocate memory. ", 2);
 	exit(12);
 }
+
+// 12 - ENOMEM - Out of memory
