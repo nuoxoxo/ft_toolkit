@@ -17,6 +17,7 @@
 # include "unistd.h" // size_t dependency
 
 # define slen ft_strlen
+# define exit_error_alloc ft_exit_error_alloc
 
 /*
  *

@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_toolkit.h"
+
 void	exit_error_alloc(void)
 {
 	ft_putendl_fd("cannot allocate memory. ", 2);
