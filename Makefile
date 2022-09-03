@@ -26,7 +26,8 @@ SRC_PRT		:=	print.c \
 SRC_GNL		:=	get_next_line.c \
 			get_next_line_utils.c
 
-SRC_LIBC	:=	ft_atoi.c \
+SRC_LIBC	:=	ft_atoll.c \
+			ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \

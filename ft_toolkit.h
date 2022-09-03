@@ -53,6 +53,7 @@ void	ft_striteri(char *s, void (*f) (unsigned int, char*));
 char	**ft_split(char const *s, char c);
 
 int		ft_atoi(const char *s);
+long long	ft_atoll(const char *str); // new
 int		ft_isascii(int c);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
