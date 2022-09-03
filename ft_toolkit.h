@@ -15,8 +15,9 @@
 
 # include "stdlib.h"
 # include "unistd.h" // size_t dependency
-//# include "print/print.h"
-//# include "get_next_line/get_next_line.h"
+
+# define slen ft_strlen
+# define exit_error_alloc ft_exit_error_alloc
 
 /*
  *
@@ -41,10 +42,15 @@ void	ft_putnbr_fd(int n, int fd);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *des, const char *src, size_t size);
-char	*ft_strnstr(const char *huge, const char *tiny, size_t n);
+
+char	*ft_strnstr(const char *source, const char *lookup, size_t n);
+char    *ft_strstr(const char *source, const char *lookup);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
+
+int		ft_strcmp(const char *i1, const char *i2); // NEW
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
 char	*ft_substr(char const *s, unsigned int start, size_t n);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *charset);
@@ -59,6 +65,10 @@ int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+
+//	new
+
+void	exit_error_alloc(void);
 
 /*
  *

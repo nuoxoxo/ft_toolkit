@@ -51,7 +51,9 @@ SRC_LIBC	:=	ft_atoll.c \
 			ft_strlen.c \
 			ft_strmapi.c \
 			ft_strncmp.c \
+			ft_strcmp.c \
 			ft_strnstr.c \
+			ft_strstr.c \
 			ft_strrchr.c \
 			ft_strtrim.c \
 			ft_substr.c \
@@ -63,20 +65,18 @@ SRC_LIBC	:=	ft_atoll.c \
 			ft_lstlast.c \
 			ft_lstmap.c \
 			ft_lstnew.c \
-			ft_lstsize.c
+			ft_lstsize.c \
+			ft_exit_error_alloc.c
 
-			#ft_tolower.c
-			#ft_toupper.c
 
-SRC_LGP		:=	$(addprefix ./get_next_line/, $(SRC_GNL)) \
-			$(addprefix ./libft/, $(SRC_LIBC)) \
-			$(addprefix ./print/, $(SRC_PRT)) \
+SRC_LGP		:=	$(addprefix get_next_line/, $(SRC_GNL)) \
+			$(addprefix libft/, $(SRC_LIBC)) \
+			$(addprefix print/, $(SRC_PRT)) \
 
-SRC		:=	$(addprefix ./ft_toolkit/, $(SRC_LGP))
+SRC		:=	$(addprefix ft_toolkit/, $(SRC_LGP))
 
 BUD		:=	$(SRC:%.c=%.o)
-#BUD		:=	$(notdir $(SRC))
-#BUD		:=	$(patsubst %, %, $(BUD:.c=.o))
+
 
 all		:	$(NAME)
 
