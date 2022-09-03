@@ -66,7 +66,8 @@ SRC_LIBC	:=	ft_atoll.c \
 			ft_lstmap.c \
 			ft_lstnew.c \
 			ft_lstsize.c \
-			ft_exit_error_alloc.c
+			ft_exit_error_alloc.c \
+			ft_void_cleaner.c
 
 
 SRC_LGP		:=	$(addprefix get_next_line/, $(SRC_GNL)) \

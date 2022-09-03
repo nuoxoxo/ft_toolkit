@@ -3,19 +3,18 @@
 /*                                                        ...      :::::::    */
 /*   _                                                  ...      :::    :::   */
 /*                                                    ... ...         :::     */
-/*   By:  ______  <marvin@42.fr>                    ...  ...       :::        */
+/*   By: nxu <marvin@42.fr>                         ...  ...       :::        */
 /*                                                ...........   :::           */
-/*   Created: ____/__/__ __:__:__ by nuoxoxo           ...    :::             */
-/*   Updated: ____/__/__ __:__:__ by nuoxoxo          ...   ::::::::.fi       */
+/*   Created: ____/__/__ __:__:__ by nxu               ...    :::             */
+/*   Updated: ____/__/__ __:__:__ by nxu              ...   ::::::::.fi       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_toolkit.h"
 
-void	ft_exit_error_alloc(void)
+void	void_cleaner(void *tmp)
 {
-	ft_putendl_fd("cannot allocate memory. ", 2);
-	exit(12);
+	if (tmp)
+		free(tmp);
+	tmp = NULL;
 }
-
-// 12 - ENOMEM - Out of memory
