@@ -26,7 +26,8 @@ SRC_PRT		:=	print.c \
 SRC_GNL		:=	get_next_line.c \
 			get_next_line_utils.c
 
-SRC_LIBC	:=	ft_atoi.c \
+SRC_LIBC	:=	ft_atoll.c \
+			ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \
@@ -65,7 +66,8 @@ SRC_LIBC	:=	ft_atoi.c \
 			ft_lstmap.c \
 			ft_lstnew.c \
 			ft_lstsize.c \
-			ft_exit_error_alloc.c
+			ft_exit_error_alloc.c \
+			ft_void_cleaner.c
 
 
 SRC_LGP		:=	$(addprefix get_next_line/, $(SRC_GNL)) \
