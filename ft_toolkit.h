@@ -67,7 +67,7 @@ int		ft_isprint(int c);
 
 //	new
 
-void	exit_error_alloc(void);
+void	ft_exit_error_alloc(void);
 
 /*
  *
