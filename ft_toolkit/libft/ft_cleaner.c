@@ -12,9 +12,10 @@
 
 #include "ft_toolkit.h"
 
-void	void_cleaner(void *tmp)
+void	ft_cleaner(void *tmp)
 {
-	if (tmp)
-		free(tmp);
+	if (! tmp)
+		return ;
+	free(tmp);
 	tmp = NULL;
 }

@@ -16,8 +16,7 @@
 # include "stdlib.h"
 # include "unistd.h" // size_t dependency
 
-# define slen ft_strlen
-# define exit_error_alloc ft_exit_error_alloc
+# define LL long long
 
 /*
  *
@@ -29,10 +28,11 @@ char	*get_next_line(int f);
 int		print(const char *s, ...);
 
 char	*ft_itoa(int n);
+
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s);
 
-char	*ft_strndup(const char *__, int _); // new
+char	*ft_strndup(const char *__, int _);
 
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
@@ -44,11 +44,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *des, const char *src, size_t size);
 
 char	*ft_strnstr(const char *source, const char *lookup, size_t n);
-char    *ft_strstr(const char *source, const char *lookup);
+char	*ft_strstr(const char *source, const char *lookup);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
 
-int		ft_strcmp(const char *i1, const char *i2); // NEW
+int		ft_strcmp(const char *i1, const char *i2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char	*ft_substr(char const *s, unsigned int start, size_t n);
@@ -58,18 +58,20 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 void	ft_striteri(char *s, void (*f) (unsigned int, char*));
 char	**ft_split(char const *s, char c);
 
+LL		ft_atoll(const char *s);
 int		ft_atoi(const char *s);
-long long	ft_atoll(const char *str); // new
 int		ft_isascii(int c);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
 //	new
 
 void	ft_exit_error_alloc(void);
-void	ft_void_cleaner(void *_);
+void	ft_cleaner(void *_);
 
 /*
  *
