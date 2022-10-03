@@ -1,30 +1,46 @@
 #include "ft_toolkit.h"
 
-char	*ft_strjoin_delim(char const *s, char const *s2, char *sep)
+static int	slen(const char *s);
+
+char	*ft_strjoin_delim(char const *left, char const *right, char *delim)
 {
-	char	*result;
-	size_t	i;
+	char	*res;
+	int		len;
+	int		i;
+
+
+//	res = ft_calloc(sizeof(char),
+//			(ft_strlen(s) + ft_strlen(delim) + ft_strlen(s2) + 1));
+	len = slen(left) + slen(right) + slen(delim);
+	res = malloc(sizeof(char) * (len + 1));
+	if (!res)
+		return (NULL);
+	i = 0;
+	while (left && left[i])
+	{
+		res[i] = left[i];
+		++i;
+	}
+	while (delim && delim[i - slen(left)])
+	{
+		res[i] = delim[i - slen(left)];
+		++i;
+	}
+	while (right && right[i - slen(left) - slen(delim)])
+	{
+		res[i] = right[i - slen(left) - slen(delim)];
+		++i;
+	}
+	res[i] = '\0';
+	return (res);
+}
+
+static int	slen(const char *s)
+{
+	int		i;
 
 	i = 0;
-	result = ft_calloc(sizeof(char),
-			(ft_strlen(s) + ft_strlen(sep) + ft_strlen(s2) + 1));
-	if (!result)
-		return (NULL);
-	while (s && s[i])
-	{
-		result[i] = s[i];
-		i ++;
-	}
-	while (sep && sep[i - ft_strlen(s)])
-	{
-		result[i] = sep[i - ft_strlen(s)];
-		i ++;
-	}
-	while (s2 && s2[i - ft_strlen(s) - ft_strlen(sep)])
-	{
-		result[i] = s2[i - ft_strlen(s) - ft_strlen(sep)];
-		i ++;
-	}
-	result[i] = '\0';
-	return (result);
+	while (s[i])
+		++i;
+	return (i);
 }
