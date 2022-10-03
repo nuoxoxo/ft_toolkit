@@ -12,7 +12,7 @@
 
 #include "print.h"
 
-//int	ft_printf(const char *s, ...)
+//int	print(const char *s, ...)
 
 int	print(const char *s, ...)
 {
@@ -34,6 +34,30 @@ int	print(const char *s, ...)
 			res += fmt(ap, s[++i]);
 	}
 	return (res);
+}
+
+int	fpf(int fd, const char *s, ...)
+{
+	int		i;
+	int		total;
+	va_list	ap;
+
+	i = 0;
+	total = 0;
+	va_start(ap, s);
+	while (s[i])
+	{
+		if (s[i] == '%')
+		{
+			i ++;
+			total += fmt(ap, s[i]);
+		}
+		else
+			total += write(fd, &s[i], 1);
+		i ++;
+	}
+	va_end(ap);
+	return (total);
 }
 
 int	len(const char *s)

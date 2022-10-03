@@ -26,6 +26,8 @@ SRC_PRT		:=	print.c \
 SRC_GNL		:=	get_next_line.c \
 			get_next_line_utils.c
 
+# ADDED: ft_isspace
+
 SRC_LIBC	:=	ft_atoll.c \
 			ft_atoi.c \
 			ft_bzero.c \
@@ -35,6 +37,7 @@ SRC_LIBC	:=	ft_atoll.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
+			ft_isspace.c \
 			ft_itoa.c \
 			ft_putchar_fd.c \
 			ft_putendl_fd.c \
@@ -46,6 +49,7 @@ SRC_LIBC	:=	ft_atoll.c \
 			ft_strndup.c \
 			ft_striteri.c \
 			ft_strjoin.c \
+			ft_strjoin_delim.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
@@ -72,7 +76,7 @@ SRC_LIBC	:=	ft_atoll.c \
 
 SRC_LGP		:=	$(addprefix get_next_line/, $(SRC_GNL)) \
 			$(addprefix libft/, $(SRC_LIBC)) \
-			$(addprefix print/, $(SRC_PRT)) \
+			$(addprefix print/, $(SRC_PRT))
 
 SRC		:=	$(addprefix ft_toolkit/, $(SRC_LGP))
 

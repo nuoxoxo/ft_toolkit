@@ -26,6 +26,7 @@
 
 char	*get_next_line(int f);
 int		print(const char *s, ...);
+int		fpf(int fd, const char *s, ...);
 
 char	*ft_itoa(int n);
 
@@ -53,6 +54,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char	*ft_substr(char const *s, unsigned int start, size_t n);
 char	*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strjoin_delim(char const *s1, char const *s2, char *sep); // ADDED
 char	*ft_strtrim(char const *s1, char const *charset);
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 void	ft_striteri(char *s, void (*f) (unsigned int, char*));
@@ -60,6 +62,8 @@ char	**ft_split(char const *s, char c);
 
 LL		ft_atoll(const char *s);
 int		ft_atoi(const char *s);
+
+int			ft_isspace(char c); // ADDED
 int		ft_isascii(int c);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -68,8 +72,7 @@ int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
-//	new
-
+//		new
 void	ft_exit_error_alloc(void);
 void	ft_cleaner(void *_);
 

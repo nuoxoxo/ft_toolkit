@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_toolkit.h"
+
 long long	ft_atoll(const char *str)
 {
 	unsigned long long	nb;
