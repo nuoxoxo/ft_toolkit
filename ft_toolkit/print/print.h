@@ -23,7 +23,7 @@
 //int		print(const char *a, ...);
 
 int		print(const char *a, ...);
-int     fpf(int fd, const char *s, ...);
+int		fpf(int fd, const char *s, ...);
 int		fmt(va_list aa, const char a);
 
 int		route_str(char *a);			// route s

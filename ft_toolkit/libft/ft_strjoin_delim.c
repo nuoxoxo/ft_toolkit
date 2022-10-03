@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ...      :::::::    */
+/*   _                                                  ...      :::    :::   */
+/*                                                    ... ...         :::     */
+/*   By: nxu <marvin@42.fr>                         ...  ...       :::        */
+/*                                                ...........   :::           */
+/*   Created: ____/__/__ __:__:__ by nxu               ...    :::             */
+/*   Updated: ____/__/__ __:__:__ by nxu              ...   ::::::::.fi       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_toolkit.h"
 
-static int	slen(const char *s);
+static int		slen(const char *s);
 
 char	*ft_strjoin_delim(char const *left, char const *right, char *delim)
 {
@@ -8,9 +20,8 @@ char	*ft_strjoin_delim(char const *left, char const *right, char *delim)
 	int		len;
 	int		i;
 
-
-//	res = ft_calloc(sizeof(char),
-//			(ft_strlen(s) + ft_strlen(delim) + ft_strlen(s2) + 1));
+	//res = ft_calloc(sizeof(char),
+	//		(ft_strlen(s) + ft_strlen(delim) + ft_strlen(s2) + 1));
 	len = slen(left) + slen(right) + slen(delim);
 	res = malloc(sizeof(char) * (len + 1));
 	if (!res)

@@ -13,6 +13,6 @@
 int	ft_isspace(char c)
 {
 	if ((c >= 9 && c <= 13) || c == ' ' || c == '\0')
-		return 1;
-	return 0;
+		return (1);
+	return (0);
 }
