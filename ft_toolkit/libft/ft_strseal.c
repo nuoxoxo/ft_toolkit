@@ -12,6 +12,8 @@
 
 #include "ft_toolkit.h"
 
+static int	slen(const char *s);
+
 char	*ft_strseal(char *src, char const *end)
 {
 	char	*res;
@@ -20,7 +22,7 @@ char	*ft_strseal(char *src, char const *end)
 
 	i = 0;
 	j = 0;
-	res = malloc(sizeof(char) * (ft_strlen(src) + ft_strlen(end) + 1));
+	res = malloc(sizeof(char) * (slen(src) + slen(end) + 1));
 	if (!res)
 	{
 		free(src);
@@ -37,4 +39,14 @@ char	*ft_strseal(char *src, char const *end)
 	}
 	free(src);
 	return (res);
+}
+
+static int	slen(const char *s)
+{
+	int		i;
+
+	i = 0;
+	while (s[i])
+		++i;
+	return (i);
 }
