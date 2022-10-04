@@ -15,12 +15,12 @@
 char	*ft_strseal(char *src, char const *end)
 {
 	char	*res;
-	int         i;
-	int         j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
-    res = malloc(sizeof(char) * (ft_strlen(src) + ft_strlen(end) + 1));
+	res = malloc(sizeof(char) * (ft_strlen(src) + ft_strlen(end) + 1));
 	if (!res)
 	{
 		free(src);
@@ -29,7 +29,7 @@ char	*ft_strseal(char *src, char const *end)
 	while (src && src[i])
 	{
 		res[i] = src[i];
-        ++i;
+		++i;
 	}
 	while (end && end[j])
 	{

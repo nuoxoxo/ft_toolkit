@@ -17,13 +17,9 @@ static int		slen(const char *s);
 char	*ft_strjoin_delim(char const *left, char const *right, char *delim)
 {
 	char	*res;
-	int		len;
 	int		i;
 
-	//res = ft_calloc(sizeof(char),
-	//		(ft_strlen(s) + ft_strlen(delim) + ft_strlen(s2) + 1));
-	len = slen(left) + slen(right) + slen(delim);
-	res = malloc(sizeof(char) * (len + 1));
+	res = malloc(sizeof(char) * (slen(left) + slen(right) + slen(delim) + 1));
 	if (!res)
 		return (NULL);
 	i = 0;
