@@ -14,30 +14,25 @@
 
 static int	slen(const char *s);
 
-char	*ft_strseal(char *src, char const *end)
+char	*ft_strseal(char *allocated_string, char const *end)
 {
 	char	*res;
 	int		i;
 	int		j;
 
-	i = 0;
-	j = 0;
-	res = malloc(sizeof(char) * (slen(src) + slen(end) + 1));
+	res = malloc(sizeof(char) * (slen(allocated_string) + slen(end) + 1));
 	if (!res)
 	{
-		free(src);
+		free(allocated_string);
 		return (NULL);
 	}
-	while (src && src[i])
-	{
-		res[i] = src[i];
-		++i;
-	}
+	i = -1;
+	while (allocated_string && allocated_string[++i])
+		res[i] = allocated_string[i];
+	j = 0;
 	while (end && end[j])
-	{
 		res[i++] = end[j++];
-	}
-	free(src);
+	free(allocated_string);
 	return (res);
 }
 
