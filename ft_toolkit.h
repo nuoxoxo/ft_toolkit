@@ -64,6 +64,7 @@ char	**ft_split(char const *s, char c);
 LL		ft_atoll(const char *s);
 int		ft_atoi(const char *s);
 
+int		ft_isquote(char c); // ADDED
 int		ft_isspace(char c); // ADDED
 int		ft_isspace_non_linebreak(char c); // ADDED
 int		ft_is_lt_gt_or(char c);

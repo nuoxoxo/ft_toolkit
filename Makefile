@@ -40,6 +40,7 @@ SRC_LIBC	:=	ft_atoll.c \
 			ft_is_lt_gt_or.c \
 			ft_isspace_non_linebreak.c \
 			ft_isspace.c \
+			ft_isquote.c \
 			ft_itoa.c \
 			ft_putchar_fd.c \
 			ft_putendl_fd.c \
