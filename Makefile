@@ -37,6 +37,7 @@ SRC_LIBC	:=	ft_atoll.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
+			ft_is_lt_gt_or.c \
 			ft_isspace_non_linebreak.c \
 			ft_isspace.c \
 			ft_itoa.c \

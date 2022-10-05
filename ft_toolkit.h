@@ -66,6 +66,7 @@ int		ft_atoi(const char *s);
 
 int		ft_isspace(char c); // ADDED
 int		ft_isspace_non_linebreak(char c); // ADDED
+int		ft_is_lt_gt_or(char c);
 int		ft_isascii(int c);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
