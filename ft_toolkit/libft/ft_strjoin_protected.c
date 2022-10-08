@@ -14,7 +14,7 @@
 
 static int	slen(const char *s);
 
-char	*ft_strseal(char *allocated_string, char const *end)
+char	*ft_strjoin_protected(char *allocated_string, char const *end)
 {
 	char	*res;
 	int		i;

@@ -53,7 +53,7 @@ SRC_LIBC	:=	ft_atoll.c \
 			ft_striteri.c \
 			ft_strjoin.c \
 			ft_strjoin_delim.c \
-			ft_strseal.c \
+			ft_strjoin_protected.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
 			ft_strlen.c \

@@ -55,7 +55,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t n);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strjoin_delim(char const *l, char const *r, char *s); // ADDED
-char	*ft_strseal(char *s, char const *end); // ADDED
+char	*ft_strjoin_protected(char *s, char const *end); // ADDED
 char	*ft_strtrim(char const *s1, char const *charset);
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 void	ft_striteri(char *s, void (*f) (unsigned int, char*));
