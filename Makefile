@@ -23,6 +23,13 @@ SRC_PRT		:=	print.c \
 			route_u.c \
 			route_x.c
 
+SRC_FPF		:=	fpf.c \
+			route_cs.c \
+			route_id.c \
+			route_p.c \
+			route_u.c \
+			route_x.c
+
 SRC_GNL		:=	get_next_line.c \
 			get_next_line_utils.c
 
@@ -80,7 +87,8 @@ SRC_LIBC	:=	ft_atoll.c \
 
 SRC_LGP		:=	$(addprefix get_next_line/, $(SRC_GNL)) \
 			$(addprefix libft/, $(SRC_LIBC)) \
-			$(addprefix print/, $(SRC_PRT))
+			$(addprefix print/, $(SRC_PRT)) \
+			$(addprefix fpf/, $(SRC_FPF))
 
 SRC		:=	$(addprefix ft_toolkit/, $(SRC_LGP))
 

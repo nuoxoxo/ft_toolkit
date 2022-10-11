@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print.h"
+#include "fpf.h"
 
 //int	print(const char *s, ...)
 
-int	print(const char *s, ...)
+int	fpf(int fd, const char *s, ...)
 {
 	int		res;
 	int		i;
@@ -28,10 +28,10 @@ int	print(const char *s, ...)
 		if (s[i] ^ 37)
 		{
 			res += 1;
-			write(1, & s[i], 1);
+			write(fd, & s[i], 1);
 		}
 		else
-			res += fmt(ap, s[++i]);
+			res += fmt(fd, ap, s[++i]);
 	}
 	return (res);
 }
@@ -51,7 +51,7 @@ int	fpf(int fd, const char *s, ...)
 		if (s[i] == '%')
 		{
 			i ++;
-			total += fmt(ap, s[i]);
+			total += fmt(fd, ap, s[i]);
 		}
 		else
 			total += write(fd, &s[i], 1);
@@ -72,25 +72,25 @@ int	len(const char *s)
 	return (i);
 }
 
-int	fmt(va_list ap, const char c)
+int	fmt(int fd, va_list ap, const char c)
 {
 	int		size;
 
 	if (c == 'c')
-		size = route_chr(va_arg(ap, int));
+		size = route_chr(fd, va_arg(ap, int));
 	if (c == 's')
-		size = route_str(va_arg(ap, char *));
+		size = route_str(fd, va_arg(ap, char *));
 	if (c == 'p')
-		size = route_ptr(va_arg(ap, uintptr_t));
+		size = route_ptr(fd, va_arg(ap, uintptr_t));
 	if (c == 'd' || c == 'i')
-		size = route_dec(va_arg(ap, int));
+		size = route_dec(fd, va_arg(ap, int));
 	if (c == 'u')
-		size = route_uin(va_arg(ap, unsigned int));
+		size = route_uin(fd, va_arg(ap, unsigned int));
 	if (c == 'x')
-		size = route_hex(va_arg(ap, unsigned int), "0123456789abcdef");
+		size = route_hex(fd, va_arg(ap, unsigned int), "0123456789abcdef");
 	if (c == 'X')
-		size = route_hex(va_arg(ap, unsigned int), "0123456789ABCDEF");
+		size = route_hex(fd, va_arg(ap, unsigned int), "0123456789ABCDEF");
 	if (c == '%')
-		size = write(1, & c, 1);
+		size = write(fd, & c, 1);
 	return (size);
 }
