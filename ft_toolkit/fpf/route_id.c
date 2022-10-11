@@ -12,18 +12,18 @@
 
 #include "fpf.h"
 
-int	route_dec(int fd, int n)
+int	fpf_route_dec(int fd, int n)
 {
 	char	*num;
 	int		size;
 
-	num = itoa(n);
-	size = route_str(fd, num);
+	num = fpf_itoa(n);
+	size = fpf_route_str(fd, num);
 	free(num);
 	return (size);
 }
 
-int	count_dec(int num)
+int	fpf_count_dec(int num)
 {
 	int	i;
 
@@ -41,16 +41,16 @@ int	count_dec(int num)
 	return (i);
 }
 
-char	*itoa(int num)
+char	*fpf_itoa(int num)
 {
 	char	*res;
 	int		size;
 
 	if (num == -2147483648)
-		return (stos("-2147483648"));
+		return (fpf_stos("-2147483648"));
 	if (!num)
-		return (stos("0"));
-	size = count_dec(num);
+		return (fpf_stos("0"));
+	size = fpf_count_dec(num);
 	res = malloc(size + 1);
 	if (num < 0)
 	{
@@ -66,13 +66,13 @@ char	*itoa(int num)
 	return (res);
 }
 
-char	*stos(char *s)
+char	*fpf_stos(char *s)
 {
 	char	*p;
 	char	*d;
 	int		size;
 
-	size = len(s);
+	size = fpf_len(s);
 	d = malloc(size + 1);
 	p = d;
 	while (*s)

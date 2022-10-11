@@ -25,28 +25,28 @@
 // int		print(const char *a, ...); // model
 
 int		fpf(int fd, const char *s, ...);
-int		fmt(int fd, va_list aa, const char a);
+int		fpf_fmt(int fd, va_list aa, const char a);
 
-int		route_str(int fd, char *a);			// route s
-int		route_chr(int fd, int a);			// route c
+int		fpf_route_str(int fd, char *a);			// route s
+int		fpf_route_chr(int fd, int a);			// route c
 
-int		route_dec(int fd, int a);			// route id
-int		count_dec(int a);
-char	*stos(char *a);
-char	*itoa(int a);
+int		fpf_route_dec(int fd, int a);			// route id
+int		fpf_count_dec(int a);
+char	*fpf_stos(char *a);
+char	*fpf_itoa(int a);
 
-int		route_uin(int fd, unsigned int a);		// route u
-int		count_uin(unsigned int a);
-char	*uitoa(unsigned int a);
+int		fpf_route_uin(int fd, unsigned int a);		// route u
+int		fpf_count_uin(unsigned int a);
+char	*fpf_uitoa(unsigned int a);
 
-int		route_hex(int fd, unsigned int aa, char *a);	// route xX
-int		count_hex(unsigned int a);
-void	print_hex(int fd, unsigned int aa, char *a);
+int		fpf_route_hex(int fd, unsigned int aa, char *a);	// route xX
+int		fpf_count_hex(unsigned int a);
+void	fpf_print_hex(int fd, unsigned int aa, char *a);
 
-int		route_ptr(int fd, uintptr_t a);			// route p
-int		count_ptr(uintptr_t a);
-void	print_ptr(int fd, uintptr_t a);
+int		fpf_route_ptr(int fd, uintptr_t a);			// route p
+int		fpf_count_ptr(uintptr_t a);
+void	fpf_print_ptr(int fd, uintptr_t a);
 
-int		len(const char *a);
+int		fpf_len(const char *a);
 
 #endif

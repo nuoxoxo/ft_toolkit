@@ -31,7 +31,7 @@ int	fpf(int fd, const char *s, ...)
 			write(fd, & s[i], 1);
 		}
 		else
-			res += fmt(fd, ap, s[++i]);
+			res += fpf_fmt(fd, ap, s[++i]);
 	}
 	return (res);
 }
@@ -62,7 +62,7 @@ int	fpf(int fd, const char *s, ...)
 }
 */
 
-int	len(const char *s)
+int	fpf_len(const char *s)
 {
 	int		i;
 
@@ -72,24 +72,24 @@ int	len(const char *s)
 	return (i);
 }
 
-int	fmt(int fd, va_list ap, const char c)
+int	fpf_fmt(int fd, va_list ap, const char c)
 {
 	int		size;
 
 	if (c == 'c')
-		size = route_chr(fd, va_arg(ap, int));
+		size = fpf_route_chr(fd, va_arg(ap, int));
 	if (c == 's')
-		size = route_str(fd, va_arg(ap, char *));
+		size = fpf_route_str(fd, va_arg(ap, char *));
 	if (c == 'p')
-		size = route_ptr(fd, va_arg(ap, uintptr_t));
+		size = fpf_route_ptr(fd, va_arg(ap, uintptr_t));
 	if (c == 'd' || c == 'i')
-		size = route_dec(fd, va_arg(ap, int));
+		size = fpf_route_dec(fd, va_arg(ap, int));
 	if (c == 'u')
-		size = route_uin(fd, va_arg(ap, unsigned int));
+		size = fpf_route_uin(fd, va_arg(ap, unsigned int));
 	if (c == 'x')
-		size = route_hex(fd, va_arg(ap, unsigned int), "0123456789abcdef");
+		size = fpf_route_hex(fd, va_arg(ap, unsigned int), "0123456789abcdef");
 	if (c == 'X')
-		size = route_hex(fd, va_arg(ap, unsigned int), "0123456789ABCDEF");
+		size = fpf_route_hex(fd, va_arg(ap, unsigned int), "0123456789ABCDEF");
 	if (c == '%')
 		size = write(fd, & c, 1);
 	return (size);

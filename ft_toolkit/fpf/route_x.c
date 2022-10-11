@@ -14,18 +14,18 @@
 
 int	route_hex(int fd, unsigned int num, char *baseline)
 {
-	print_hex(fd, num, baseline);
-	return (count_hex(num));
+	fpf_print_hex(fd, num, baseline);
+	return (fpf_count_hex(num));
 }
 
-void	print_hex(int fd, unsigned int num, char *baseline)
+void	fpf_print_hex(int fd, unsigned int num, char *baseline)
 {
 	if (num >= 16)
-		print_hex(fd, num / 16, baseline);
+		fpf_print_hex(fd, num / 16, baseline);
 	write(fd, & baseline[num % 16], 1);
 }
 
-int	count_hex(unsigned int x)
+int	fpf_count_hex(unsigned int x)
 {
 	int	i;
 

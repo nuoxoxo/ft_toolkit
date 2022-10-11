@@ -12,12 +12,12 @@
 
 #include "fpf.h"
 
-int	route_chr(int fd, int c)
+int	fpf_route_chr(int fd, int c)
 {
 	return (write(fd, & c, 1));
 }
 
-int	route_str(int fd, char *s)
+int	fpf_route_str(int fd, char *s)
 {
 	int	i;
 

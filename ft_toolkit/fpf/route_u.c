@@ -12,18 +12,18 @@
 
 #include "fpf.h"
 
-int	route_uin(int fd, unsigned int n)
+int	fpf_route_uin(int fd, unsigned int n)
 {
 	char	*num;
 	int		size;
 
-	num = uitoa(n);
-	size = route_str(fd, num);
+	num = fpf_uitoa(n);
+	size = fpf_route_str(fd, num);
 	free(num);
 	return (size);
 }
 
-int	count_uin(unsigned int num)
+int	fpf_count_uin(unsigned int num)
 {
 	int	i;
 
@@ -36,14 +36,14 @@ int	count_uin(unsigned int num)
 	return (i);
 }
 
-char	*uitoa(unsigned int num)
+char	*fpf_uitoa(unsigned int num)
 {
 	char	*res;
 	int		size;
 
 	if (!num)
-		return (stos("0"));
-	size = count_uin(num);
+		return (fpf_stos("0"));
+	size = fpf_count_uin(num);
 	res = malloc(size + 1);
 	res[size--] = 0;
 	while (num)
