@@ -12,7 +12,7 @@
 
 #include "fpf.h"
 
-int	route_hex(int fd, unsigned int num, char *baseline)
+int	fpf_route_hex(int fd, unsigned int num, char *baseline)
 {
 	fpf_print_hex(fd, num, baseline);
 	return (fpf_count_hex(num));
