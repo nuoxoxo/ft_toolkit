@@ -115,13 +115,13 @@ typedef struct s_deque
 	struct s_deque	*next;
 }					t_deque;
 
-t_deque		*deque_back(t_deque *lst);
-t_deque		*deque_create_node(void *node);
-void		deque_insert(t_deque *lst, t_deque *new);
-void		deque_push_back(t_deque **alst, t_deque *new);
-void		deque_clear(t_deque **lst, void (*del) (void *));
-void		deque_remove(t_deque *lst, void (*del) (void *));
-int			deque_size(t_deque *lst);
+t_deque	*deque_back(t_deque *lst);
+t_deque	*deque_create_node(void *node);
+void	deque_insert(t_deque *lst, t_deque *new);
+void	deque_push_back(t_deque **alst, t_deque *new);
+void	deque_clear(t_deque **lst, void (*del) (void *));
+void	deque_remove(t_deque *lst, void (*del) (void *));
+int		deque_size(t_deque *lst);
 
 /*
  *
