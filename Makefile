@@ -84,11 +84,19 @@ SRC_LIBC	:=	ft_atoll.c \
 			ft_exit_error_alloc.c \
 			ft_cleaner.c
 
+SRC_DEQ		:=	deque_remove.c \
+			deque_create_node.c \
+			deque_clear.c \
+			deque_back.c \
+			deque_size.c \
+			deque_insert.c \
+			deque_push_back.c \
 
 SRC_LGP		:=	$(addprefix get_next_line/, $(SRC_GNL)) \
 			$(addprefix libft/, $(SRC_LIBC)) \
 			$(addprefix print/, $(SRC_PRT)) \
-			$(addprefix fpf/, $(SRC_FPF))
+			$(addprefix fpf/, $(SRC_FPF)) \
+			$(addprefix deque/, $(SRC_DEQ))
 
 SRC		:=	$(addprefix ft_toolkit/, $(SRC_LGP))
 
