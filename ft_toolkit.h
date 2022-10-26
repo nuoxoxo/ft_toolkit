@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ...      :::::::    */
-/*   _                                                  ...      :::    :::   */
+/*   ft_toolkit.h                                       :+:      :+:    :+:   */
 /*                                                    ... ...         :::     */
 /*   By:  ______  <marvin@42.fr>                    ...  ...       :::        */
 /*                                                ...........   :::           */
 /*   Created: ____/__/__ __:__:__ by nuoxoxo           ...    :::             */
-/*   Updated: ____/__/__ __:__:__ by nuoxoxo          ...   ::::::::.fi       */
+/*   Updated: 2022/10/24 16:33:48 by nuxu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,10 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 void	ft_striteri(char *s, void (*f) (unsigned int, char*));
 char	**ft_split(char const *s, char c);
 
-LL		ft_atoll(const char *s);
+double	ft_stof(const char *s);
+int		ft_pow(int __, int _);
 int		ft_atoi(const char *s);
+LL		ft_atoll(const char *s);
 
 int		ft_isquote(char c); // ADDED
 int		ft_isspace(char c); // ADDED

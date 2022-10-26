@@ -6,7 +6,7 @@
 #    By:  nuo  <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: ____/__/__ __:__:__ by nuoxoxo           #+#    #+#              #
-#    Updated: ____/__/__ __:__:__ by nuoxoxo          ###   ########.fr        #
+#    Updated: 2022/10/24 16:34:02 by nuxu             ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -37,6 +37,8 @@ SRC_GNL		:=	get_next_line.c \
 
 SRC_LIBC	:=	ft_atoll.c \
 			ft_atoi.c \
+			ft_stof.c \
+			ft_pow.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \

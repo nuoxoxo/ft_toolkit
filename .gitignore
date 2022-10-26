@@ -11,7 +11,7 @@ Thumbs.db
 *.sum
 *.class
 *.tasty
-
+.vscode
 advent_1*/*
 !advent_1*/*.cpp
 !advent_1*/*.py
