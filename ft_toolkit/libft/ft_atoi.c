@@ -16,6 +16,41 @@
 //	crucial fix :
 //		none
 
+#include "ft_toolkit.h"
+
+int	ft_atoi(const char *s)
+{
+	long int	tt;
+	int			sign;
+	int			i;
+
+	i = 0;
+	sign = 1;
+	tt = 0;
+	if (!s)
+		return (0);
+	while (ft_isspace(s[i]))
+		i ++;
+	if (s[i] == '+')
+		i ++;
+	else if (s[i] == '-')
+	{
+		i ++;
+		sign = -1;
+	}
+	while (ft_isdigit(s[i]))
+	{
+		tt = tt * 10 + (s[i] - '0');
+		i ++;
+	}
+	tt = sign * tt;
+	return ((int)tt);
+}
+
+/*	wrong solution		*/
+
+
+/*
 int	is_num(char c);
 int	is_wsp(char c);
 
@@ -61,6 +96,7 @@ int	is_num(char c)
 		return (1);
 	return (0);
 }
+*/
 
 /*
 
