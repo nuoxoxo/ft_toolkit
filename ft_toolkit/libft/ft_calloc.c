@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ...      :::::::    */
-/*   _                                                  ...      :::    :::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    ... ...         :::     */
 /*   By:  ______  <marvin@42.fr>                    ...  ...       :::        */
 /*                                                ...........   :::           */
 /*   Created: ____/__/__ __:__:__ by nuoxoxo           ...    :::             */
-/*   Updated: ____/__/__ __:__:__ by nuoxoxo          ...   ::::::::.fi       */
+/*   Updated: 2022/11/11 14:39:25 by nuxu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,23 @@
 //  all bits set to 0
 
 #include "ft_toolkit.h"
+
+/*	fix 2022	*/
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	void	*res;
+
+	if (count == 0 || size == 0)
+		return (malloc(0));
+	res = (void *) malloc(count * size);
+	if (!res)
+		return (NULL);
+	ft_memset((unsigned char *) res, 0, count * size);
+	return (res);
+}
+
+/*
 
 void	*bz(void *des, size_t n);
 
@@ -41,6 +58,8 @@ void	*bz(void *des, size_t n)
 	}
 	return (des);
 }
+
+*/
 
 /*
 
